@@ -1,0 +1,15 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "include": [
+    "electron/**/*.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx"
+  ],
+  "compilerOptions": {
+    "baseUrl": ".", // baseUrl phải chuẩn
+    "paths": {
+      "@core/*": ["../../packages/core/src/*"],
+      "@ui/*": ["../../packages/ui/src/*"]
+    }
+  }
+}

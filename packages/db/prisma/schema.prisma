@@ -1,0 +1,21 @@
+// Schema tối thiểu cho MVP
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Product {
+  id        String   @id @default(cuid())
+  sku       String   @unique
+  name      String
+  price     Decimal  @db.Decimal(10, 2)
+  taxRate   Decimal  @db.Decimal(5, 2)
+  barcode   String?  @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

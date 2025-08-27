@@ -1,0 +1,21 @@
+{
+"compilerOptions": {
+"target": "ES2020",
+"module": "ESNext",
+"jsx": "react-jsx",
+"moduleResolution": "Bundler",
+"baseUrl": ".",
+"paths": {
+"@/*": ["*"],
+"@core/*": ["packages/core/src/*"],
+"@types/*": ["packages/types/src/*"],
+"@printing/*": ["packages/printing/src/*"],
+"@sync/*": ["packages/sync/src/*"],
+"@ui/*": ["packages/ui/src/*"],
+"@db/*": ["packages/db/src/*"],
+"@shared/*": ["packages/shared/src/*"]
+},
+"strict": true,
+"skipLibCheck": true
+}
+}
